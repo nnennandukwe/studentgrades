@@ -1,3 +1,9 @@
+# This is a list of students as dictionaries and their grades are recorded
+# within different categories as lists.
+# This information is then extracted and manipulated
+# to determine the averages and their letter grade via
+# conditionals and functions.
+
 lloyd = {
     "name": "Lloyd",
     "homework": [90.0, 97.0, 75.0, 92.0],
@@ -17,7 +23,7 @@ tyler = {
     "tests": [100.0, 100.0]
 }
 
-# Add your function below!
+# Functions for averaging grades are below:
 def average(numbers):
     total = sum(numbers)
     total = float(total)
@@ -32,6 +38,8 @@ def get_average(student):
 
     return result
 
+# Now, you'll see how I determine the LETTER grade the
+# student gets, depending on the integer
 def get_letter_grade(score):
     if score >= 90:
         return "A"
@@ -46,6 +54,7 @@ def get_letter_grade(score):
 
     return get_letter_grade
 
+# Here are the averages of the students: 
 print get_average(lloyd)
 print get_letter_grade(get_average(lloyd))
 
@@ -58,5 +67,10 @@ def get_class_average(students):
 
 students = [lloyd, alice, tyler]
 
+# with my list I made above, I can calculate
+# the class average.
+
 print get_class_average(students)
 print get_letter_grade(get_class_average(students))
+
+
